@@ -29,7 +29,7 @@ source "qemu" "ubuntu" {
   headless         = true
   iso_checksum     = "file:https://cloud-images.ubuntu.com/${var.ubuntu_version}/current/SHA256SUMS"
   iso_url          = "https://cloud-images.ubuntu.com/${var.ubuntu_version}/current/${var.ubuntu_version}-server-cloudimg-amd64.img"
-  output_directory = "output-${var.ubuntu_version}"
+  output_directory = "../output-${var.ubuntu_version}"
   shutdown_command = "echo 'packer' | sudo -S shutdown -P now"
   ssh_password     = "ubuntu"
   ssh_username     = "ubuntu"

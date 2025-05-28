@@ -28,12 +28,12 @@ sudo sed -i 's|#Banner none|Banner /etc/ssh_banner|' '/etc/ssh/sshd_config'
 sudo echo "Welcome to Application Wordpress" > /etc/ssh_banner
 
 echo "==> installing Apache and MySQL"
-sudo apt install apache2 -y
-sudo apt install mysql-server -y
+sudo apt install apache2 -y -qq
+sudo apt install mysql-server -y -qq
 
 echo "==> installing PHP and dependencies"
 sudo apt install php libapache2-mod-php php-mysql php-curl php-gd \
-php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip -y
+php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip -y -qq
 
 #sudo systemctl restart apache2
 
